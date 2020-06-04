@@ -1,5 +1,5 @@
 import torch
-from ..bbox import assign_and_sample, bbox2delta, build_assigner, XXSampler
+from ..bbox import assign_and_sample, bbox2delta, build_assigner, SelectiveIoUSampler
 from ..utils import multi_apply
 
 
@@ -119,7 +119,7 @@ def anchor_target_single(flat_anchors,
         bbox_assigner = build_assigner(cfg.assigner)
         assign_result = bbox_assigner.assign(anchors, gt_bboxes,
                                              gt_bboxes_ignore, gt_labels)
-        bbox_sampler = XXSampler()
+        bbox_sampler = SelectiveIoUSampler()
         sampling_result = bbox_sampler.sample(assign_result, anchors,
                                               gt_bboxes)
 
