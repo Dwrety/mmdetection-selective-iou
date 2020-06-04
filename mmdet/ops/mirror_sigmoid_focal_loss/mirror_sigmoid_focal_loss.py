@@ -48,4 +48,3 @@ if __name__ == "__main__":
     targets = torch.ones(16).long()
 
     print(test_inputs, targets)
-    # loss = 

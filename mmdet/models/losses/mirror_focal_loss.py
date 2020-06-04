@@ -25,6 +25,9 @@ def mirror_sigmoid_focal_loss(pred,
 
 @LOSSES.register_module
 class MirrorFocalLoss(nn.Module):
+    """This is the implementation of Background Recalibration FocalLoss.
+       This function needs to work with special anchor box thresholding.
+    """
     def __init__(self, use_sigmoid=True,
                  gamma_1=2.0,
                  gamma_2=2.0,

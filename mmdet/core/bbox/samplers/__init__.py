@@ -6,10 +6,10 @@ from .ohem_sampler import OHEMSampler
 from .pseudo_sampler import PseudoSampler
 from .random_sampler import RandomSampler
 from .sampling_result import SamplingResult
-from .xxsampler import XXSampler
+from .selective_iou_sampler import SelectiveIoUSampler
 
 __all__ = [
     'BaseSampler', 'PseudoSampler', 'RandomSampler',
     'InstanceBalancedPosSampler', 'IoUBalancedNegSampler', 'CombinedSampler',
-    'OHEMSampler', 'SamplingResult', 'XXSampler'
+    'OHEMSampler', 'SamplingResult', 'SelectiveIoUSampler'
 ]
